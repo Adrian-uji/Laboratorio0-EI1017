@@ -1,13 +1,18 @@
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static java.lang.Math.round;
 import static org.junit.Assert.assertEquals;
 
 class EstadisticaTest {
-
+    private Estadistica prueba;
+    @BeforeEach
+    void before(){
+        prueba = new Estadistica();
+    }
     @Test
     void media() {
-        Estadistica prueba = new Estadistica();
+        //Estadistica prueba = new Estadistica();
         float[] p1 = new float[0];
         System.out.println("Comprobamos que se puede hacer la media de un conjunto vacío -> 0 / " + prueba.media(p1));
         assertEquals(0,prueba.media(p1),0.0);
@@ -30,7 +35,7 @@ class EstadisticaTest {
 
     @Test
     void variancia() {
-        Estadistica prueba = new Estadistica();
+        //Estadistica prueba = new Estadistica();
         float[] p1 = {};
         System.out.println("Comprobamos que ocurre cuando el valor dado es un conjunto vacío -> 0 / "+prueba.variancia(p1));
         assertEquals(0,prueba.variancia(p1),0.0);
@@ -52,7 +57,7 @@ class EstadisticaTest {
 
     @Test
     void desviacion() {
-        Estadistica prueba = new Estadistica();
+        //Estadistica prueba = new Estadistica();
         float p1[] = {};
         System.out.println("Comprobamos que ocurre cuando el valor dado es un conjunto vacío -> 0 / "+prueba.desviacion(p1));
         assertEquals(0,prueba.desviacion(p1),0.0);
